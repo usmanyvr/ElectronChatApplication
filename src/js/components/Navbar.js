@@ -3,12 +3,12 @@ import { Link, useHistory } from 'react-router-dom';
 
 export default function Navbar() {
     const history = useHistory();
-    
+
     return (
         <div className="chat-navbar">
             <nav className="chat-navbar-inner">
                 <div className="chat-navbar-inner-left">
-                    <button onClick={ () => history.goBack()} className="btn btn-outline-primary">Back</button>
+                    <button onClick={() => history.goBack()} className="btn btn-outline-primary">Back</button>
                     <Link
                         to="/settings"
                         className="btn btn-outline-success ml-2">Settings</Link>
@@ -17,7 +17,7 @@ export default function Navbar() {
                     <span className="logged-in-user">Hi User</span>
                     <Link
                         to="/register"
-                        onClick={() => {history.push('/register') }}
+                        onClick={() => { history.push('/register') }}
                         className="btn btn-outline-danger ml-2">Register</Link>
                     <Link
                         to="/login"
